@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Event.js"></script>
+</head>
+<body>
+
+<button onclick="Event.trigger('evt1','123')">click me</button>
+
+</body>
+
+<script>
+    Event.listen('evt1', function (num) {
+        console.log('[evt 1] :' + num);
+    });
+
+    Event.listen('evt1', function (num) {
+        console.log('[evt 2] :' + num);
+    });
+
+</script>
+</html>
